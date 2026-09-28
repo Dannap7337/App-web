@@ -1,0 +1,459 @@
+:root {
+    --texto: rgba(255, 255, 255, 0.7);
+    --blanco: #fff;
+    --input: #3a3b3c;
+    --input-hover: #4b4d4e;
+    --activo: #2d88ff;
+    --gris-claro: #b0b3b8;
+    --fondo-contenido: #242526;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #18191a;
+    color: var(--texto);
+}
+
+a {
+    color: var(--texto);
+    text-decoration: none;
+}
+
+/* Header */
+
+header {
+    background: var(--fondo-contenido);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cabecera-superior {
+    padding: 6px 0;
+}
+
+header .logo {
+    display: inline-flex;
+    align-items: center;
+}
+
+header .logo svg {
+    color: var(--blanco);
+    height: 38px;
+    width: 38px;
+}
+
+header .barra-busqueda {
+    position: relative;
+    width: 100%;
+    max-width: 240px;
+}
+
+header .barra-busqueda input {
+    width: 100%;
+    border: none;
+    background: var(--input);
+    color: var(--texto);
+    height: 40px;
+    border-radius: 100px;
+    padding: 0 20px 0 40px;
+    outline: none;
+}
+
+header .barra-busqueda .icono {
+    position: absolute;
+    top: 8px;
+    left: 14px;
+    color: var(--texto);
+    pointer-events: none;
+}
+
+/* Menu Principal */
+
+header .menu {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 4px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+header .menu a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    height: 46px;
+    border-radius: 6px;
+    color: var(--gris-claro);
+}
+
+header .menu a:hover {
+    color: var(--texto);
+    background: var(--input);
+    border-radius: 5px;
+}
+
+header .menu a svg {
+    width: 25px;
+    height: 25px;
+}
+
+header .menu .active {
+    border-bottom: 3px solid var(--activo);
+    color: var(--activo);
+    border-radius: 0;
+}
+
+header .menu .active:hover {
+    background: none;
+    border-radius: 0px;
+    color: var(--activo);
+}
+
+/* Botones */
+
+header .botones a {
+    background: var(--input);
+    display: inline-flex;
+    border-radius: 100px;
+    min-width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 7px;
+}
+
+header .botones a:hover {
+    background: var(--input-hover);
+    color: var(--texto);
+}
+
+header .botones .perfil {
+    height: 40px;
+    padding: 0 7px;
+    background: none;
+    min-width: max-content;
+}
+
+header .botones .perfil img {
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    margin-right: 5px;
+    object-fit: cover;
+}
+
+/* Aside */
+
+aside {
+    position: sticky;
+    top: 56px;
+    height: calc(100vh - 56px);
+    overflow: auto;
+    padding-top: 16px;
+}
+
+/* Enlaces rapidos */
+
+.enlaces-rapidos > nav a {
+    display: flex;
+    align-items: center;
+    color: var(--blanco);
+    padding: 10px 10px;
+    border-radius: 3px;
+}
+
+.enlaces-rapidos > nav a:hover {
+    background: var(--input-hover);
+}
+
+.enlaces-rapidos .perfil img {
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.enlaces-rapidos .icono {
+    margin-right: 20px;
+}
+
+.enlaces-rapidos .icono svg {
+    height: 20px;
+    width: 20px;
+}
+
+/* Footer */
+
+footer {
+    margin: 40px 0;
+}
+
+footer nav a {
+    font-size: 14px;
+    margin-right: 7px;
+    color: var(--gris-claro);
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+    color: var(--gris-claro);
+}
+
+/* Contactos */
+
+.contactos .seccion {
+    margin-bottom: 20px;
+}
+
+.contactos .titulo {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--gris-claro);
+    margin-bottom: 10px;
+}
+
+.contactos .publicidad {
+    display: block;
+    max-height: 100px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.contactos .publicidad img {
+    width: 100%;
+    display: block;
+}
+
+.contactos nav a {
+    display: flex;
+    align-items: center;
+    color: var(--blanco);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.contactos nav a:hover {
+    background: var(--input-hover);
+}
+
+.contactos nav a img {
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+/* Main */
+
+.contenido-principal {
+    padding-top: 116px;
+}
+
+main .publicar,
+main .publicacion {
+    background: var(--fondo-contenido);
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+main .publicar .formulario {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+main .foto {
+    display: block;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 12px;
+}
+
+main .foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main .publicar .formulario input {
+    flex: 1;
+    width: 100%;
+    border: none;
+    background: var(--input);
+    color: var(--texto);
+    height: 40px;
+    border-radius: 100px;
+    padding: 0 16px;
+    outline: none;
+}
+
+main .publicar hr {
+    margin: 12px 0;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+main .publicar .botones {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .publicar .botones a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    gap: 8px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+main .publicar .botones a:hover {
+    background: var(--input-hover);
+    color: var(--texto);
+}
+
+main .publicar .botones a svg {
+    margin-right: 7px;
+}
+
+/* Publicacion */
+
+main .publicacion .header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+main .publicacion .header .datos {
+    display: flex;
+    flex-direction: column;
+}
+
+main .publicacion .header .datos .nombre {
+    color: var(--blanco);
+}
+
+main .publicacion .header .datos .hora {
+    color: var(--texto);
+    font-size: 14px;
+}
+
+main .publicacion .header .datos .hora:hover {
+    color: var(--texto);
+}
+
+main .publicacion .header .datos a:hover {
+    color: var(--texto);
+    text-decoration: underline;
+}
+
+main .publicacion .body {
+    margin: 0 -10px;
+}
+
+main .publicacion .body p {
+    padding: 0 10px;
+    margin-bottom: 10px;
+    color: var(--blanco);
+}
+
+main .publicacion .body img {
+    width: 100%;
+    display: block;
+}
+
+main .publicacion .comentarios {
+    padding: 10px;
+}
+
+main .publicacion .comentarios .me-gusta svg {
+    margin-right: 10px;
+    color: #e75151;
+}
+
+main .publicacion .comentarios a,
+main .publicacion .comentarios .me-gusta {
+    color: var(--texto);
+}
+
+main .publicacion .comentarios a:hover {
+    color: var(--texto);
+    text-decoration: underline;
+}
+
+main .publicacion .botones {
+    display: flex;
+}
+
+main .publicacion .botones button {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    color: var(--texto);
+    padding: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+main .publicacion .botones button:hover {
+    background: var(--input);
+}
+
+main .publicacion .botones button svg {
+    margin-right: 5px;
+}
+
+/* Mediaqueries */
+
+/* Dispositivo MD */
+
+@media screen and (max-width: 991px) {
+    .enlaces-rapidos,
+    .contactos {
+        display: none !important;
+    }
+}
+
+/* Dispositivo LG */
+
+@media screen and (min-width: 992px) {
+    header .menu {
+        display: inline-flex;
+        justify-content: center;
+        padding-top: 0;
+        border-top: none;
+    }
+
+    header .menu a {
+        flex: none;
+        padding: 0 24px;
+        height: 56px;
+    }
+
+    .contenido-principal {
+        padding-top: 72px;
+    }
+}
+
+/* Dispositivo XL */
+
+@media screen and (min-width: 1200px) {
+    header .menu a {
+        padding: 0 35px;
+    }
+}
